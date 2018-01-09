@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="generalModulo">
+    <head>
+        <meta charset="utf-8">
+        <title>Aprendiendo Angular - HTTP</title>
+    </head>
+    <body ng-controller="httpControl">
+        <input type="text" ng-model="newPost.title"/>
+        <textarea ng-model="newPost.body"></textarea>
+        <button ng-click="addPost()">Añadir</button>
+        <ul>
+            <li ng-repeat="post in posts">
+                <h3>{{post.title}}</h3>
+                <p>{{post.body}}</p>
+            </li>
+        </ul>
+    </body>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/http.js"></script>
+</html>

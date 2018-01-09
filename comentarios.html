@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="generalModulo">
+    <head>
+        <meta charset="utf-8">
+        <title>Aprendiendo Angular - comentarios</title>
+    </head>
+    <body ng-controller="comentControl">
+        <input type="text" ng-model="nuevoComentario.comentario"/>
+        <input type="text" ng-model="nuevoComentario.username"/>
+        <button ng-click="agregarComentario()">Agregar comentario</button>
+        <h3>Comentarios</h3>
+        <ul>
+            <li ng-repeat="comentario in comentarios">
+                {{comentario.comentario}} - <strong>{{comentario.username}}</strong>
+            </li>
+        </ul>
+    </body>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/comentarios.js"></script>
+</html>
